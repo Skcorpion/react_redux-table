@@ -78,6 +78,7 @@ interface SetNewPersonSexAction {
 }
 interface SubmitFormAction {
   type: typeof ActionTypes.SUBMIT_FORM;
+  newPerson: IPerson;
 }
 
 export type Actions =

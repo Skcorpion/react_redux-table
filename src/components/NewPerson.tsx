@@ -7,6 +7,7 @@ import {
   getRangeOfBirth,
   getRangeOfDeath,
   getVisibleParents,
+  getSubmitedData,
 } from '../reducers';
 import {
   setNewPersonName,
@@ -24,6 +25,7 @@ const NewPerson: FC<ConnectedProps<typeof connector>> = ({
   rangeOfBirth,
   rangeOfDeath,
   parents,
+  newPerson,
   setNewPersonName,
   setNewPersonBirth,
   setNewPersonDeath,
@@ -38,7 +40,7 @@ const NewPerson: FC<ConnectedProps<typeof connector>> = ({
   );
   const handleFormSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    submitForm();
+    submitForm(newPerson);
     history.goBack();
   };
 
@@ -183,6 +185,7 @@ const mapStateToProps = (state: RootState) => ({
   rangeOfBirth: getRangeOfBirth(state),
   rangeOfDeath: getRangeOfDeath(state),
   parents: getVisibleParents(state),
+  newPerson: getSubmitedData(state),
 });
 
 const mapDispatchToProps = {

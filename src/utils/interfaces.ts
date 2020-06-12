@@ -13,13 +13,19 @@ export interface IPersonWithId extends IPerson {
   age: number;
 }
 
-export interface RootState {
-  people: IPersonWithId[];
-  fetching: boolean;
-  loaded: boolean;
+export interface ISort {
   filteredQuery: string;
   sortBy: string;
   sortOrder: boolean;
+}
+
+export interface IFetchData {
+  people: IPersonWithId[];
+  fetching: boolean;
+  loaded: boolean;
+}
+
+export interface INewPerson {
   newPersonName: string;
   newPersonBirth: number | null;
   newPersonDeath: number | null;
@@ -28,4 +34,10 @@ export interface RootState {
   newPersonSex: string | null;
   rangeOfBirth: number[];
   rangeOfDeath: number[];
+}
+
+export interface RootState {
+  sortReducer: ISort;
+  fetchData: IFetchData;
+  newPerson: INewPerson;
 }

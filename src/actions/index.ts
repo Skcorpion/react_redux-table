@@ -46,8 +46,9 @@ export const setNewPersonSex = (newPersonSex: string): Actions => ({
   type: ActionTypes.SET_NEW_PERSON_SEX,
   newPersonSex,
 });
-export const submitForm = (): Actions => ({
+export const submitForm = (newPerson: IPerson): Actions => ({
   type: ActionTypes.SUBMIT_FORM,
+  newPerson,
 });
 
 export const loadData = () => {
