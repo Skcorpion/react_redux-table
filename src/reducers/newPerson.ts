@@ -78,7 +78,6 @@ export const getSubmitedData = (state: INewPerson) => ({
   fatherName: state.newPersonFather,
   motherName: state.newPersonMother,
 });
-export const getNewPersonName = (state: INewPerson) => state.newPersonName;
 export const getNewPersonBirth = (state: INewPerson) => state.newPersonBirth;
 export const getRangeOfBirth = (state: INewPerson) => state.rangeOfBirth;
 export const getRangeOfDeath = (state: INewPerson) => state.rangeOfDeath;

@@ -3,7 +3,6 @@ import { connect, ConnectedProps } from 'react-redux';
 import { RootState } from '../utils/interfaces';
 import debounce from 'lodash/debounce';
 import {
-  getNewPersonName,
   getRangeOfBirth,
   getRangeOfDeath,
   getVisibleParents,
@@ -21,7 +20,6 @@ import {
 import { useHistory } from 'react-router-dom';
 
 const NewPerson: FC<ConnectedProps<typeof connector>> = ({
-  newPersonName,
   rangeOfBirth,
   rangeOfDeath,
   parents,
@@ -179,7 +177,6 @@ const NewPerson: FC<ConnectedProps<typeof connector>> = ({
 };
 
 const mapStateToProps = (state: RootState) => ({
-  newPersonName: getNewPersonName(state),
   rangeOfBirth: getRangeOfBirth(state),
   rangeOfDeath: getRangeOfDeath(state),
   parents: getVisibleParents(state),

@@ -25,8 +25,6 @@ export const getSortBy = (state: RootState) =>
 export const getSortOrder = (state: RootState) =>
   fromSort.getSortOrder(state.sortReducer);
 
-export const getNewPersonName = (state: RootState) =>
-  fromNewPerson.getNewPersonName(state.newPerson);
 export const getNewPersonBirth = (state: RootState) =>
   fromNewPerson.getNewPersonBirth(state.newPerson);
 export const getRangeOfBirth = (state: RootState) =>
