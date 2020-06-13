@@ -35,9 +35,7 @@ const NewPerson: FC<ConnectedProps<typeof connector>> = ({
   submitForm,
 }) => {
   const history = useHistory();
-  const [visiblePersonName, setVisiblePersonName] = useState<string>(
-    newPersonName
-  );
+  const [visiblePersonName, setVisiblePersonName] = useState<string>('');
   const handleFormSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     submitForm(newPerson);
